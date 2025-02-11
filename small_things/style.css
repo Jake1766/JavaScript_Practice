@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: white;
     
     background-color: darkslateblue;
@@ -11,6 +12,8 @@ body {
 
 }
 
+/* generic */
+
 .black_text {
     color: black;
 }
@@ -19,6 +22,78 @@ body {
     color: black;
 }
 
+.border {
+    border-style: solid;
+    border-color:cadetblue;
+    border-width: 8px;
+    border-radius: 20px;
+}
+
 .rps_container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
     background-color: white;
+
+    border-style: solid;
+    border-radius: 20px;
+
+    padding: 20px;
+
+    text-align: center;
+}
+
+.rps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    border-style: solid;
+    border-color:cadetblue;
+    border-width: 8px;
+    border-radius: 20px;
+
+    min-height: 300px;
+    min-width: 100%;
+
+    background-color:rgb(48, 85, 73)
+}
+
+.rps_output {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+    width: 90%;
+}
+
+.rps_output p {
+    color: black;
+    font-size: large;
+}
+
+.rps_buttons {
+    display: flex;
+    flex-direction: row;
+
+    font-size: larger;
+}
+
+
+.rps_buttons button {
+    font-weight: bold;
+    font-size: large;
+
+    margin: 5px;
+
+    border-style: outset;
+    border-color: cadetblue;
+    border-width: 5px;
+    border-radius: 20px;
 }

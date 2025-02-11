@@ -14,4 +14,8 @@ function declaring_string(){
 function template_literal() {
     const word = "beep";
     console.log(`here is a word: ${word}`);
+
 }
+
+
+// Below is all the functions for the rock paper scissors game
