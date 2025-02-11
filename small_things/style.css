@@ -1,3 +1,24 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    
     background-color: darkslateblue;
+}
+
+.text {
+
+}
+
+.black_text {
+    color: black;
+}
+
+.black_header {
+    color: black;
+}
+
+.rps_container {
+    background-color: white;
 }
