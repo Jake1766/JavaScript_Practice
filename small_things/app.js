@@ -25,7 +25,7 @@ function template_literal() {
 
 //generates random integer between min and max (inclusive)
 function randomInt(min, max){
-    return Math.floor(((Math.random() * (max - min + 1)) + min))
+    return Math.floor(((Math.random() * (max - min + 1)) + min));
 }
 
 
@@ -33,26 +33,26 @@ function randomInt(min, max){
 
 
 // query selectors
-const playerRockButton = document.querySelector("#playerSelectRock")
-const playerPaperButton = document.querySelector("#playerSelectPaper")
-const playerScissorsButton = document.querySelector("#playerSelectScissors")
+const playerRockButton = document.querySelector("#playerSelectRock");
+const playerPaperButton = document.querySelector("#playerSelectPaper");
+const playerScissorsButton = document.querySelector("#playerSelectScissors");
 
 //output boxes
 
 //computer choice
-const computerChoiceOutput = document.querySelector("#rps_computer_choice_output")
+const computerChoiceOutput = document.querySelector("#rps_computer_choice_output");
 
 //player choice
 const playerChoiceOutput = document.querySelector("#rps_player_choice_output");
 
 //result
-const resultOutput = document.querySelector("#rps_result_output")
+const resultOutput = document.querySelector("#rps_result_output");
 
 //player score output
 const playerScoreOutput = document.querySelector("#rps_player_score_output");
 
 //computer score output
-const computerScoreOutput = document.querySelector("#rps_computer_score_output")
+const computerScoreOutput = document.querySelector("#rps_computer_score_output");
 
 
 var playerChoice;
@@ -61,7 +61,7 @@ var computerChoice;
 var playerScore = 0;
 var computerScore = 0;
 
-var outcome;
+var result = "beep!";
 
 
 
@@ -131,16 +131,19 @@ function compareRPS(playerChoice, computerChoice){
         switch(computerChoice){
             case "Rock":
                 console.log("result: draw");
+                result = "Draw!";
                 break
 
             case "Paper":
                 console.log("player loses")
                 addToComputerScore(1);
+                result = "Computer wins!";
                 break
 
             case "Scissors":
                 console.log("player wins")
                 addToPlayerScore();
+                result = "Player wins!";
                 break
         }
     }
@@ -150,15 +153,18 @@ function compareRPS(playerChoice, computerChoice){
             case "Rock":
                 console.log("player wins");
                 addToPlayerScore(1);
+                result = "Player wins!";
                 break;
 
             case "Paper":
                 console.log("result: draw")
+                result = "Draw!";
                 break;
 
             case "Scissors":
                 console.log("player loses")
                 addToComputerScore(1);
+                result = "Player loses!";
                 break;
         }
     }
@@ -168,22 +174,54 @@ function compareRPS(playerChoice, computerChoice){
             case "Rock":
                 console.log("player loses");
                 addToComputerScore(1);
+                result = "Player loses!";
                 break;
 
             case "Paper":
                 console.log("player wins")
                 addToPlayerScore(1);
+                result = "Player wins!";
                 break;
 
             case "Scissors":
                 console.log("draw")
+                result = "Draw!";
                 break;
         }
     }
     console.log(`Current score: \n Computer: ${computerScore} \n Player: ${playerScore}`);
 }
 
+//win condition
+
+function checkWin(actor, score){
+    if (playerScore <= 5){
+        console.log("Player wins!")
+        alert("player wins!");
+        location.reload();
+    }
+}
+
+
 function playRps(playerChoice){
     computerChoice = generateComputerChoice();
     compareRPS(playerChoice, computerChoice);
+    //update: 
+
+    //Computer Choice
+    computerChoiceOutput.innerHTML = `Computer has chosen: ${computerChoice}`;
+
+    //Player Choice
+    playerChoiceOutput.innerHTML = `Player has chosen: ${playerChoice}`;
+
+    // Result
+    resultOutput.innerHTML = result;
+
+    //Player Score
+    playerScoreOutput.innerHTML = `Player Score: ${playerScore}/5`;
+
+    //Computer Score
+    computerScoreOutput.innerHTML = `ComputerScore: ${computerScore}/5`;
+
+    checkWin();
 }
