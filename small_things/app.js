@@ -31,9 +31,29 @@ function randomInt(min, max){
 
 // Below is all the functions for the rock paper scissors game contained in a class
 
+
+// query selectors
 const playerRockButton = document.querySelector("#playerSelectRock")
 const playerPaperButton = document.querySelector("#playerSelectPaper")
 const playerScissorsButton = document.querySelector("#playerSelectScissors")
+
+//output boxes
+
+//computer choice
+const computerChoiceOutput = document.querySelector("#rps_computer_choice_output")
+
+//player choice
+const playerChoiceOutput = document.querySelector("#rps_player_choice_output");
+
+//result
+const resultOutput = document.querySelector("#rps_result_output")
+
+//player score output
+const playerScoreOutput = document.querySelector("#rps_player_score_output");
+
+//computer score output
+const computerScoreOutput = document.querySelector("#rps_computer_score_output")
+
 
 var playerChoice;
 var computerChoice;
@@ -78,8 +98,8 @@ function generateComputerChoice(){
             computerChoice = "Scissors";
             break;
         
-            default: 
-                console.log("error, rng computer choice match not found");
+        default: 
+            console.log("error, rng computer choice match not found");
 
     }
     console.log(`Computer choice is ${computerChoice}`);
