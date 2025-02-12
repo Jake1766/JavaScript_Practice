@@ -72,4 +72,5 @@ function genrateComputerChoice(){
                 console.log("error, rng computer choice match not found");
 
     }
+    console.log(`Computer choice is ${computerChoice}`);
 }
