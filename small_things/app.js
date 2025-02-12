@@ -4,7 +4,7 @@
 
 console.log("script working!");
 console.log(Math.random());
-console.log(randomInt(4, 10))
+
 
 
 function declaring_string(){
@@ -36,6 +36,7 @@ const playerPaperButton = document.querySelector("#playerSelectPaper")
 const playerScissorsButton = document.querySelector("#playerSelectScissors")
 
 var playerChoice;
+var computerChoice;
 
 
 // add event listeners
@@ -53,5 +54,22 @@ playerScissorsButton.addEventListener('click', function(){
 })
 
 function genrateComputerChoice(){
-    number = Math.random()
+    number = randomInt(1, 3);
+    switch(number){
+        case 1:
+            computerChoice = "Rock";
+            break;
+        
+        case 2: 
+            computerChoice = "Paper";
+            break;
+
+        case 3: 
+            computerChoice = "Scissors";
+            break;
+        
+            default: 
+                console.log("error, rng computer choice match not found");
+
+    }
 }
