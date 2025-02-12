@@ -2,6 +2,8 @@
 // https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings
 // I'll keep them all contained within seperate functions
 
+console.log("script working!");
+
 
 function declaring_string(){
     const string = "this is a string!";
@@ -20,9 +22,9 @@ function template_literal() {
 
 // Below is all the functions for the rock paper scissors game contained in a class
 
-const playerRockButton = document.querySelector("playerSelectRock")
-const playerPaperButton = document.querySelector("playerSelectPaper")
-const playerScissorsButton = document.querySelector("playerSelectScissors")
+const playerRockButton = document.querySelector("#playerSelectRock")
+const playerPaperButton = document.querySelector("#playerSelectPaper")
+const playerScissorsButton = document.querySelector("#playerSelectScissors")
 
 
 // add event listeners
