@@ -38,8 +38,8 @@ const playerScissorsButton = document.querySelector("#playerSelectScissors")
 var playerChoice;
 var computerChoice;
 
-var playerScore;
-var computerScore;
+var playerScore = 0;
+var computerScore = 0;
 
 var outcome;
 
@@ -49,16 +49,20 @@ var outcome;
 playerRockButton.addEventListener('click', function(){
     console.log("Rock selected")
     playerChoice = "Rock";
+    playRps(playerChoice);
 })
 playerPaperButton.addEventListener('click', function(){
     console.log("Paper selected")
     playerChoice = "Paper"
+    playRps(playerChoice);
 })
 playerScissorsButton.addEventListener('click', function(){
     console.log("Scissors selected");
     playerChoice = "Scissors";
+    playRps(playerChoice);
 })
 
+//returns computer choice as string i.e "Rock"
 function generateComputerChoice(){
     number = randomInt(1, 3);
     switch(number){
@@ -79,6 +83,7 @@ function generateComputerChoice(){
 
     }
     console.log(`Computer choice is ${computerChoice}`);
+    return computerChoice;
 }   
 
 function addToPlayerScore(int){
@@ -89,12 +94,76 @@ function addToComputerScore(int){
     computerScore += 1;
 }
 
-//calculates outcomes of choices
-function compareRPS(playerChoice, computerChoice){
-    //draw is easy, will do that first.
+// will write functions to update scores on doc here
 
-    if(playerChoice === computerChoice){
-        outcome = "draw"
-        console.log(outcome);
+
+//calculates outcomes of choices
+//updates score based on result, returns nothing (is a void function)
+function compareRPS(playerChoice, computerChoice){
+    // general idea is to write 3 switch statements to 
+    // calculate all possible combinations. Seems like a bad
+    // way to do it, but a good place to start.
+    console.log(`Player choice this round is: ${playerChoice}`);
+    console.log(`Computer choice is: ${computerChoice}`);
+    
+
+    if (playerChoice == "Rock") {
+        switch(computerChoice){
+            case "Rock":
+                console.log("result: draw");
+                break
+
+            case "Paper":
+                console.log("player loses")
+                addToComputerScore(1);
+                break
+
+            case "Scissors":
+                console.log("player wins")
+                addToPlayerScore();
+                break
+        }
     }
+
+    if (playerChoice == "Paper") {
+        switch(computerChoice){
+            case "Rock":
+                console.log("player wins");
+                addToPlayerScore(1);
+                break;
+
+            case "Paper":
+                console.log("result: draw")
+                break;
+
+            case "Scissors":
+                console.log("player loses")
+                addToComputerScore(1);
+                break;
+        }
+    }
+
+    if (playerChoice == "Scissors") {
+        switch(computerChoice){
+            case "Rock":
+                console.log("player loses");
+                addToComputerScore(1);
+                break;
+
+            case "Paper":
+                console.log("player wins")
+                addToPlayerScore(1);
+                break;
+
+            case "Scissors":
+                console.log("draw")
+                break;
+        }
+    }
+    console.log(`Current score: \n Computer: ${computerScore} \n Player: ${playerScore}`);
+}
+
+function playRps(playerChoice){
+    computerChoice = generateComputerChoice();
+    compareRPS(playerChoice, computerChoice);
 }
