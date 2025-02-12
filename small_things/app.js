@@ -195,13 +195,18 @@ function compareRPS(playerChoice, computerChoice){
 //win condition
 
 function checkWin(actor, score){
-    if (playerScore <= 5){
-        console.log("Player wins!")
-        alert("player wins!");
+    if (playerScore >= 5){
+        console.log("Player wins the game!")
+        alert("Player wins!");
+        location.reload();
+    }
+
+    if (computerScore >= 5){
+        console.log("Computer wins the game!");
+        alert("Computer wins!");
         location.reload();
     }
 }
-
 
 function playRps(playerChoice){
     computerChoice = generateComputerChoice();
