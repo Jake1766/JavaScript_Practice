@@ -6,6 +6,8 @@ body {
     color: white;
     
     background-color: darkslateblue;
+
+    font-family: Roboto;
 }
 
 .text {
@@ -61,7 +63,7 @@ body {
     min-height: 300px;
     min-width: 100%;
 
-    background-color:rgb(48, 85, 73)
+    background-color:cadetblue
 }
 
 .rps_output {
@@ -96,4 +98,19 @@ body {
     border-color: cadetblue;
     border-width: 5px;
     border-radius: 20px;
+}
+
+.output_box {
+    border-style: solid;
+    border-color: black;
+    border-width: 4px;
+    border-radius: 10px;
+
+    text-align: left;
+
+    padding-left: 10px;
+    margin: 10px;
+
+    font-weight: bold;
+
 }

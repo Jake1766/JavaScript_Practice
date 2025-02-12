@@ -18,4 +18,20 @@ function template_literal() {
 }
 
 
-// Below is all the functions for the rock paper scissors game
+// Below is all the functions for the rock paper scissors game contained in a class
+
+const playerRockButton = document.querySelector("playerSelectRock")
+const playerPaperButton = document.querySelector("playerSelectPaper")
+const playerScissorsButton = document.querySelector("playerSelectScissors")
+
+
+// add event listeners
+playerRockButton.addEventListener('click', function(){
+    console.log("Rock selected")
+})
+playerPaperButton.addEventListener('click', function(){
+    console.log("Paper selected")
+})
+playerScissorsButton.addEventListener('click', function(){
+    console.log("Scissors selected")
+})

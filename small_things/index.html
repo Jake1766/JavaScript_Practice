@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>JS Small Things</title>
         <link rel="stylesheet" href="style.css">
-        <script src="app.js"></script>
+        
     </head>
     <body>
         <h1>Small Things</h1>
@@ -19,29 +19,31 @@
             </p>
             <div class="rps">
                 <div class="rps_buttons">
-                    <button>
+                    <button id="playerSelectRock">
                         <p>Rock</p>
                     </button>
-                    <button>
+                    <button id="playerSelectPaper">
                         <p>Paper</p>
                     </button>
-                    <button>
+                    <button id="playerSelectScissors">
                         <p>Scissors</p>
                     </button>
 
                 </div>
                     <div class="rps_output border">
-                        <div class="rps_computer_choice">
-                            <p>Computer Choice: </p>
+                        <div class="output_box rps_computer_choice">
+                            <p id="computer_choice_output">Computer Choice: </p>
                         </div>
-                        <div class="rps_player_choice">
-                            <p>Player Choice:</p>
+                        <div class="output_box rps_player_choice">
+                            <p id="player_choice_output">Player Choice:</p>
                         </div>
-                        <div class="rps_result">
-                            <p>Result:</p>
+                        <div class="output_box rps_result">
+                            <p id="result_output">Result:</p>
                     </div>
                 </div>
             </div>
         </div>
+        
     </body>
+    <script src="app.js"></script>
 </html>
