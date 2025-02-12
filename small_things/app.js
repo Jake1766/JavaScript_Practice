@@ -38,6 +38,12 @@ const playerScissorsButton = document.querySelector("#playerSelectScissors")
 var playerChoice;
 var computerChoice;
 
+var playerScore;
+var computerScore;
+
+var outcome;
+
+
 
 // add event listeners
 playerRockButton.addEventListener('click', function(){
@@ -53,7 +59,7 @@ playerScissorsButton.addEventListener('click', function(){
     playerChoice = "Scissors";
 })
 
-function genrateComputerChoice(){
+function generateComputerChoice(){
     number = randomInt(1, 3);
     switch(number){
         case 1:
@@ -73,4 +79,22 @@ function genrateComputerChoice(){
 
     }
     console.log(`Computer choice is ${computerChoice}`);
+}   
+
+function addToPlayerScore(int){
+    playerScore += 1;
+}
+
+function addToComputerScore(int){
+    computerScore += 1;
+}
+
+//calculates outcomes of choices
+function compareRPS(playerChoice, computerChoice){
+    //draw is easy, will do that first.
+
+    if(playerChoice === computerChoice){
+        outcome = "draw"
+        console.log(outcome);
+    }
 }
