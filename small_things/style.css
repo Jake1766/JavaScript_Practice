@@ -81,8 +81,11 @@ body {
 .rps_buttons {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 
     font-size: larger;
+
+    width: 100%;
 }
 
 
@@ -96,4 +99,6 @@ body {
     border-color: cadetblue;
     border-width: 5px;
     border-radius: 20px;
+
+    width: 30%
 }
