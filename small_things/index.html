@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>JS Small Things</title>
         <link rel="stylesheet" href="style.css">
-        <script src="app.js"></script>
+        
     </head>
     <body>
         <h1>Small Things</h1>
@@ -19,21 +19,22 @@
             </p>
             <div class="rps">
                 <div class="rps_buttons">
-                    <button>
+                    <button id="playerSelectRock">
                         <p>Rock</p>
                     </button>
-                    <button>
+                    <button id="playerSelectPaper">
                         <p>Paper</p>
                     </button>
-                    <button>
+                    <button id="playerSelectScissors">
                         <p>Scissors</p>
                     </button>
 
                 </div>
                     <div class="rps_output border">
-                        <div class="rps_computer_choice">
-                            <p>Computer Choice: </p>
+                        <div class="output_box rps_computer_choice_output">
+                            <p id="rps_computer_choice_output">Computer Choice: </p>
                         </div>
+<<<<<<< HEAD
                         <div class="rps_result">
                             <p>Result:</p>
                         </div>
@@ -41,7 +42,24 @@
                             <p>Player Choice:</p>
                         </div>
                     </div>
+=======
+                        <div class="output_box rps_player_choice">
+                            <p id="rps_player_choice_output">Player Choice:</p>
+                        </div>
+                        <div class="output_box rps_result">
+                            <p id="rps_result_output">Result:</p>
+                    </div>
+                    <div class="output_box player_rps_score">
+                        <p id="rps_player_score_output">Player Score: 0/5</p>
+                </div>
+                <div class="output_box computer_rps_score">
+                    <p id="rps_computer_score_output">Computer Score: 0/5</p>
+            </div>
+                </div>
+>>>>>>> 606180ef047e1ad39128ab0312831e4df0c7f8fb
             </div>
         </div>
+        
     </body>
+    <script src="app.js"></script>
 </html>
