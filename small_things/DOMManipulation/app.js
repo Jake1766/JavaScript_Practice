@@ -17,3 +17,21 @@ content.classList.add("content");
 content.textContent = 'I\'m a blue h3';
 content.style.color = 'blue';
 container.appendChild(content);
+
+content = document.createElement('div');
+content.classList.add("mainDiv");
+content.style.borderStyle = 'solid';
+content.style.borderColor = 'black';
+content.style.backgroundColor = 'pink';
+
+var subcontent = document.createElement('h1');
+subcontent.classList.add('content');
+subcontent.textContent = 'I\'m a div!';
+content.appendChild(subcontent);
+
+subcontent = document.createElement('p');
+subcontent.textContent = 'Me too!';
+content.appendChild(subcontent);
+
+container.appendChild(content);
+
