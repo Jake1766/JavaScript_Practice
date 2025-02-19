@@ -13,7 +13,7 @@ content.style.color = 'red';
 container.appendChild(content);
 
 content = document.createElement('h3');
-content.classList.add('content');
-content.textContent('I\'m a blue h3');
+content.classList.add("content");
+content.textContent = 'I\'m a blue h3';
 content.style.color = 'blue';
 container.appendChild(content);
