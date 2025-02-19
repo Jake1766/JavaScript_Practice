@@ -35,3 +35,6 @@ content.appendChild(subcontent);
 
 container.appendChild(content);
 
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert("Hello World!");
+
