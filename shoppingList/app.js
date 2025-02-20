@@ -22,7 +22,9 @@ function addItem(){
     var deleteButton = document.createElement('button');
     deleteButton.textContent = 'delete';
     //add event listener to delete button 
-    deleteButton.addEventListener('click', deleteItem);
+    deleteButton.addEventListener('click', function (){
+        deleteItem(`#${text}`);
+    })
 
 
 
@@ -38,5 +40,6 @@ function addItem(){
 
 function deleteItem(item){
     console.log('deleting: ', item);
-    item.remove();
+    document.querySelector(item).remove();
+
 }
