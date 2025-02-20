@@ -5,11 +5,7 @@ const list = document.querySelector("#list");
 
 button.addEventListener('click', addItem);
 
-function deleteItem(item){
-    console.log('deleting: ', item);
-    var item = document.querySelector(`#${item}`);
-    item.remove();
-}
+
 
 
 function addItem(){
@@ -17,20 +13,19 @@ function addItem(){
     console.log("adding item", text);
     inputText.value = '';
 
-    
+    //create list item 
+    var listItem = document.createElement('li');
+    listItem.textContent = text;
+    listItem.id = text;
 
     //create delete button
     var deleteButton = document.createElement('button');
     deleteButton.textContent = 'delete';
     //add event listener to delete button 
-    deleteButton.addEventListener('click', deleteItem(text));
+    deleteButton.addEventListener('click', deleteItem);
 
 
 
-    //create list item 
-    var listItem = document.createElement('li');
-    listItem.textContent = text;
-    listItem.id = listItem.textContent;
 
 
     //add list item to list
@@ -40,3 +35,8 @@ function addItem(){
     listItem.appendChild(deleteButton);
     
 } 
+
+function deleteItem(item){
+    console.log('deleting: ', item);
+    item.remove();
+}
