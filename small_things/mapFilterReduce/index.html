@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Map, Filter and Reduce</h1>
+    <h1>Map, Filter, and Reduce</h1>
     <p>Javascript provides a number of built in methods. Map, filter and reduce are three incredibly useful ones. I'm having a little trouble getting to grips with 
         .reduce(), so I'm going to lay out all three here and play around with them until they make sense.
     </p>
@@ -25,7 +25,15 @@
     </div>
 
     <div class="container" id="filterContainer">
-
+        <p>The next method to examine is .filter(). This method is similarly called on an existing array, 
+            however it's argument should be a conditional in the form of an arrow function. This function will
+            return a value when the condition is met, adding it to a new array. Upon finishing looping the 
+            array a new array is returned from the .filter() function that is composed of all elements that 
+            pass the conditional.
+        </p>
+        <div id="filteredImage">
+            <img src="images/filteredImage.png">
+        </div>
     </div>
 
     <div class="container" id="reduceContainer">
