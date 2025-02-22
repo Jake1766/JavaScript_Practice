@@ -36,4 +36,11 @@ function fancyTriple(arr){
    console.log('triple evens: ', triple);
 }
 
-fancyTriple(nums);
+
+//fancyTriple(nums);
+
+
+function reducePractice(nums){
+    nums.reduce(total, current => num + 1)
+}
+
