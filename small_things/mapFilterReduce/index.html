@@ -37,7 +37,26 @@
     </div>
 
     <div class="container" id="reduceContainer">
-
+        <p>.reduce() is slightly different as it does not output an array. It works
+            by executing some code on every element of an array, while keeping a running 
+            value that is updated every loop. It takes two arguments.<br><br>
+            
+            The first is an arrow function which itself has two arguments (accumulator, currentValue) which
+            mirrors closely the logic used in a for loop when keeping track of a value 
+            through the loops. When writing a for we might want to adjust the starting conditions. 
+            This is reflected in .reduce() as we are able to set the initial value in the second argument.
+            <br><br>
+            Really there are three values that can be provided through the two arguments
+            as the first argument is itself a function that takes two arguments. 
+            The initial value does not need to be provided, as the method will default 
+            to using the first value of the provided array.
+            <br><br>
+            tld:dr - Reduce performs a repeated operation and keeps track of a running total of that 
+            operation, then returns that value upon completion.
+        </p>
+        <div class="img">
+            <img src="images/reducedImage.png">
+        </div>
     </div>
     
 </body>
