@@ -44,3 +44,15 @@ function reducePractice(nums){
     nums.reduce(total, current => num + 1)
 }
 
+
+
+
+function tripledEvens(nums){
+    const evenNums = nums.filter(num => num%2 == 0)
+    console.log('even nums: ', evenNums);
+    const tripled = evenNums.map(num => num*3);
+    console.log('tripled: ', tripled); 
+    return tripled.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+}
+
+console.log(tripledEvens(nums));
