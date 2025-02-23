@@ -45,7 +45,7 @@ function reducePractice(nums){
 }
 
 
-
+// now works
 
 function tripledEvens(nums){
     const evenNums = nums.filter(num => num%2 == 0)
