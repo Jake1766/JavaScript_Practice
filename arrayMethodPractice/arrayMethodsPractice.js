@@ -17,3 +17,6 @@ function camelize(str){
 }
 
 camelize(str)
+camelize("") //empty string check
+camelize('link-style-images') //multiple hyphen check
+camelize('-webkit-transition') //another check
