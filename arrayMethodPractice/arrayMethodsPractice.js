@@ -4,11 +4,16 @@ str = "background-color"
 
 function camelize(str){
     //split string
-    str = str.split('');
-    console.log(str)
+    arr = str.split('');
     //capitalize first letter second word
-    //remove hyphen
-    //join back together
+        //identify hyphen
+        //remove hyphen
+    const capitalIndex = arr.indexOf('-');
+    arr.splice(capitalIndex, 1)
+    arr[capitalIndex] = arr[capitalIndex].toUpperCase();
+
+    str = arr.join('');
+    return str
 }
 
 camelize(str)
