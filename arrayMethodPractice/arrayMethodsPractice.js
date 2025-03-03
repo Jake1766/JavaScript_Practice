@@ -4,22 +4,34 @@ str = "background-color"
 
 function camelize(str){
     //check length > 0
-    console.log(str.length)
+
     if (str.length > 0){
-        console.log('working...')
         //split string
         arr = str.split('');
 
-        //use filer method to remove -
-        let filteredArr = arr.filter(item => item != '-')
-        console.log('filtered arr: ', filteredArr);
+        //capitalize letter
+        //check letter will not be first once filtered
+        
 
+        //need to loop to capitalize any  letter after hyphen
+        //unless hyphen at position 0
 
-        const capitalIndex = arr.indexOf('-');
-        arr.splice(capitalIndex, 1)
-        arr[capitalIndex] = arr[capitalIndex].toUpperCase();
+        arr.forEach(function(item, index, array){
+            if(index != 0){
+                if(item == '-'){
+                    array[index+1] == array[index+1].toUpperCase()
+                }
+            }
+    
+        });
+        console.log('uppercase check: ', arr);
+        
 
-        str = arr.join('');
+        //use filer method to remove hyphens
+        let filteredArr = arr.filter(item => item != '-');
+ 
+
+        str = filteredArr.join('');
         console.log(str)
         return str
     }
