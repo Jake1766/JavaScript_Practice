@@ -12,17 +12,13 @@ function camelize(str){
         //capitalize letter
         //check letter will not be first once filtered
         
-
-        //need to loop to capitalize any  letter after hyphen
-        //unless hyphen at position 0
-
+        //loops each item, if item == - and not position 0
+        //then capitalise the next item
         arr.forEach(function(item, index, array){
-            if(index != 0){
-                if(item == '-'){
-                    array[index+1] == array[index+1].toUpperCase()
-                }
-            }
-    
+          if(item == '-'){
+              array[index+1] = array[index+1].toUpperCase()
+          }
+
         });
         console.log('uppercase check: ', arr);
         
@@ -35,6 +31,7 @@ function camelize(str){
         console.log(str)
         return str
     }
+    else{return str}
 }
 
 camelize(str)
