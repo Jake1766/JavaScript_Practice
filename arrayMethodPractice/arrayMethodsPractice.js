@@ -34,7 +34,25 @@ function camelize(str){
     else{return str}
 }
 
-camelize(str)
-camelize("") //empty string check
-camelize('link-style-images') //multiple hyphen check
-camelize('-webkit-transition') //another check
+
+//checks for above function
+// camelize(str)
+// camelize("") //empty string check
+// camelize('link-style-images') //multiple hyphen check
+// camelize('-webkit-transition') //another check
+
+
+
+//Filter Range
+
+//Write a function that gets an array arr, and returns an array elements
+//with values >= a, or values <= b 
+
+function arrAB(a, b, arr){
+    let filteredArr = arr.filter(item => item >= a || item <= b);
+    console.log(filteredArr)
+}
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arrAB(8, 3, arr);
