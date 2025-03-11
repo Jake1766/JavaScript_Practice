@@ -42,17 +42,35 @@ function camelize(str){
 // camelize('-webkit-transition') //another check
 
 
+// for the following exercises I'll store the arrays
+//within the function, otherwise I'll have a bunch 
+// of globally scoped arrays
+
 
 //Filter Range
 
 //Write a function that gets an array arr, and returns an array elements
 //with values >= a, or values <= b 
 
-function arrAB(a, b, arr){
+function arrAB(a, b){
+    arr = [5, 3, 8, 1]
     let filteredArr = arr.filter(item => item >= a || item <= b);
     console.log(filteredArr)
 }
 
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//arrAB(1, 4, arr);
 
-arrAB(8, 3, arr);
+
+// Filter Range in Place
+
+// this function should remove
+// all values where n < a and n < b
+
+function filterRangeInPlace(a, b){
+    arr = [5, 2, 1, -10, 8];
+    const filteredArr = arr.filter((item) => item > a || item < b);
+    console.log(filteredArr);
+
+}
+
+filterRangeInPlace(1, 4);
