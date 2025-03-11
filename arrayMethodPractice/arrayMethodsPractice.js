@@ -53,8 +53,8 @@ function camelize(str){
 //with values >= a, or values <= b 
 
 function arrAB(a, b){
-    arr = [5, 3, 8, 1]
-    let filteredArr = arr.filter(item => item >= a || item <= b);
+    arr = [5, 3, 8, 1];
+    let filteredArr = arr.filter(item => item >= a && item <= b);
     console.log(filteredArr)
 }
 
@@ -67,10 +67,13 @@ function arrAB(a, b){
 // all values where n < a and n < b
 
 function filterRangeInPlace(a, b){
-    arr = [5, 2, 1, -10, 8];
-    const filteredArr = arr.filter((item) => item > a || item < b);
+    arr = [5, 3, 8, 1];
+    let filteredArr = arr.filter(item => item >= a && item <= b);
     console.log(filteredArr);
 
 }
+//should return
+// [3. 1]
 
 filterRangeInPlace(1, 4);
+arrAB(1, 4);
