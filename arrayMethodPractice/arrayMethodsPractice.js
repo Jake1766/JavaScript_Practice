@@ -67,13 +67,20 @@ function arrAB(a, b){
 // all values where n < a and n < b
 
 function filterRangeInPlace(a, b){
-    arr = [5, 3, 8, 1];
-    let filteredArr = arr.filter(item => item >= a && item <= b);
-    console.log(filteredArr);
+    arr = [ 5, 3, 8, 1 ];
+    for(let i = 0; i < arr.length; i++){
+        console.log(i);
+        if(arr[i] > b || arr[i] < a){
+            arr.splice(i, 1);
+            i--
+        }   
+    }
+    console.log(arr);
 
 }
 //should return
 // [3. 1]
 
 filterRangeInPlace(1, 4);
-arrAB(1, 4);
+
+
