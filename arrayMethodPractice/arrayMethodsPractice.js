@@ -66,6 +66,9 @@ function arrAB(a, b){
 // this function should remove
 // all values where n < a and n < b
 
+//need i-- as removing anelement shortens the array,
+// throwing off the index
+
 function filterRangeInPlace(a, b){
     arr = [ 5, 3, 8, 1 ];
     for(let i = 0; i < arr.length; i++){
@@ -81,6 +84,6 @@ function filterRangeInPlace(a, b){
 //should return
 // [3. 1]
 
-filterRangeInPlace(1, 4);
+
 
 
