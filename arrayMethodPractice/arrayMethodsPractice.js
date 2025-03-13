@@ -109,6 +109,23 @@ function sortDecreasing(){
     console.log(arr);
 }
 
-sortDecreasing();
+// sortDecreasing();
+
+
+//  COPY AND SORT ARRAY
+
+// we have an array of strings arr. Created a sorted copy
+// without modifying the original array
+ 
+
+// prolly just gonna use splice and sort iyyy?
+
+function copySort(arr){
+    arr = [1, 2, 43, 7, 5, 10];
+    //copy array 
+    let arrCopy = arr.splice(1);
+
+}
+
 
 
