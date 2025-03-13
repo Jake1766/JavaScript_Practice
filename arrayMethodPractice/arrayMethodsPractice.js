@@ -86,6 +86,20 @@ function filterRangeInPlace(a, b){
 
 
 // Sort decreasing order
+// .sort() will by default sort elements as strings
+// I believe this means it would rank 15 as being lower than 2
+// as the first character of the string is 1, and the first of the 
+// second element is 2. i.e 1 < 2 
+
+// To avoid this we can write a custom comparison function
+// .sort() basically walks an array and repositions 
+// elements based on whether a positive or negative number is returned.
+// if a is 5 and b is 3 and I return a - b, then the elements will be 
+// switched if a > b as a positive integer is returned.
+
+
+// By returning b - a, I can cause the array to be sorted in descending 
+// order, as b and a will be swapped if a < b this time.
 
 function sortDecreasing(){
     arr = [5, 2, 1, -10, 8];
