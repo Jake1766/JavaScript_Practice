@@ -124,11 +124,13 @@ function copySort(arr){
     arr = [1, 2, 43, 7, 5, 10];
     //copy array 
     let arrCopy = arr.splice(1);
-    // sort array
+    //sort array
     arrCopy.sort(function(a, b){
         return a - b;
     })
 }
+
+copySort();
 
 
 
