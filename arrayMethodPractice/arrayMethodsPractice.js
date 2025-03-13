@@ -85,5 +85,13 @@ function filterRangeInPlace(a, b){
 // [3. 1]
 
 
+// Sort decreasing order
+
+function sortDecreasing(){
+    arr = [5, 2, 1, -10, 8];
+    .
+}
+
+
 
 
