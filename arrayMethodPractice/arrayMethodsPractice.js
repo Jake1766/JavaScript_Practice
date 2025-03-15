@@ -48,11 +48,13 @@ function camelize(str){
 //Write a function that gets an array arr, and returns an array elements
 //with values >= a, or values <= b 
 
-function arrAB(a, b, arr){
-    let filteredArr = arr.filter(item => item >= a || item <= b);
-    console.log(filteredArr)
+function filterRange(arr, a, b){
+    let filtered = arr.filter(item => item >= a || item <= b);
+    console.log(filtered);
+    return filtered
 }
 
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-arrAB(8, 3, arr);
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+filterRange(arr, 8, 2);
