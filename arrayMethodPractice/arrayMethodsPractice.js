@@ -51,6 +51,7 @@ function camelize(str){
 
 //Write a function that gets an array arr, and returns an array elements
 //with values >= a, or values <= b 
+//merged
 
 function arrAB(a, b){
     arr = [5, 3, 8, 1];
