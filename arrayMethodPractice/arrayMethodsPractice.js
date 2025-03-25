@@ -115,7 +115,6 @@ function sortDecreasing(){
 
 
 //  COPY AND SORT ARRAY
-
 // we have an array of strings arr. Created a sorted copy
 // without modifying the original array
  
