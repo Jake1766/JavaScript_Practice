@@ -11,6 +11,7 @@ const copyA = document.getElementById('copyA');
 const copyB = document.getElementById('copyB');
 const copyC = document.getElementById('copyC');
 
+
 genBtn.addEventListener("click", insertFloat);
 
 function floatGen(min, max){
@@ -24,6 +25,24 @@ function insertFloat(){
 }
 
 function copy(element){
-    const textToCopy = Element.textContent
+    const textToCopy = Element.value;
     navigator.clipboard.writeText(textToCopy);
 }
+
+copyA.addEventListener("click", () => {
+    copy(fieldA)
+    .then(() => {
+        alert("text copied to clipboard")
+    })
+    .catch(err => {
+        console.error("error copying text: ", err)
+    })
+});
+
+copyB.addEventListener("click", () => {
+    copy(fieldB);
+});
+
+copyC.addEventListener("click", () => {
+    copy(fieldC);
+});
