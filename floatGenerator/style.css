@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#main{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+
+#genBtn{
+    font-weight: bold;
+    height: 60px;
+    margin-top: 10px;
+    height: 100px;
+}
